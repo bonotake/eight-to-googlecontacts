@@ -14,7 +14,7 @@ Email = Tuple[Optional[str], str]
 
 
 def listup(listfile) -> List[Email]:
-    pattern = "(.*?)(<([\w\.@]+)>)?,?\n"
+    pattern = "(.*?)(<([\-\w\.@]+)>)?,?\n"
     emails: Email = []
     for line in listfile:
         result = re.match(pattern, line)
